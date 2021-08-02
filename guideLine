@@ -21,6 +21,6 @@ populate database with table "structure" from migration
 #5 cream un model si o migrare (-m)
 php artisan make:model Employee -m
 
-#6 
+#6 php artisan migrate
 
 #7
