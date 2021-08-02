@@ -2,6 +2,7 @@
 namespace App\Bookings;
 
 use App\Modes\Schedule;
+use App\Modes\Service;
 use Carbon\CarbonInterval;
 class TimeSlotGenerator {
 
@@ -9,7 +10,7 @@ class TimeSlotGenerator {
 
 	protected $interval;
 
-	public function __construct(Schedule $schedule) {
+	public function __construct(Schedule $schedule, Service $service) {
 		//show by start and end date
     	$this->interval = CarbonInterval::minutes(self::INCREMENT)
     	->toPeriod(
