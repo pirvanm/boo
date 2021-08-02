@@ -1,6 +1,8 @@
 <?php 
 namespace App\Bookings;
 
+
+use Carbon\CarbonInterval;
 class TimeSlotGenerator {
 
 	protected $interval;
