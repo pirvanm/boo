@@ -13,7 +13,7 @@ class BookingController extends Controller
     	$slots = CarbonInterval::minutes(15)
     	->toPerios(now(), now()->addDay());
 
-    	
+    	dd($slots);
     	return view('bookings.create')
 
     }
