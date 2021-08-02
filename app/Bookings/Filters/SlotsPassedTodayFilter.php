@@ -1,6 +1,8 @@
 <?php 
 
 
+namespace App\Filters\SlotPasses;
+
 use App\Bookings\Filter;
 use App\Bookings\TImeSlotGenerator;
 
