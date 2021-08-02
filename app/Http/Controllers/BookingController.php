@@ -11,12 +11,9 @@ class BookingController extends Controller
 
     	$schedule = Schedule::find(2);
 
-//show by start and end date
-    	$slots = CarbonInterval::minutes(15)
-    	->toPeriod(
-    		$schedule->date->setTimeFrom($schedule->start_time),
-    		$schedule->date->setTimeFrom($schedule->end_time);
+	// use this to about dry and "spaghety code in controller "
 
+    	$slots = (new TimeSlotGenerator($schedule))->get();
 
     	return view('bookings.create', [
     		'slots' => $slots])
