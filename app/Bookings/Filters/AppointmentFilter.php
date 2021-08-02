@@ -5,7 +5,9 @@
 namespace App\Filters\SlotPasses;
 
 use App\Bookings\Filter;
-use App\Bookings\TImeSlotGenerator;
+use Illuminate\Support\Collection;
+use App\Bookings\TimeSlotGenerator;
+
 
 
 
@@ -16,7 +18,7 @@ class AppointmentFilter implements  Filter
 	public function __construct(Colllection $appointments) {
 		$this->appointments = $appointments;
 	}
-	
+
 	public function apply(TimeSlotGenerator $generator, CarbonPeriod $interval)
 	 {
 	 	// define a clousoure 
