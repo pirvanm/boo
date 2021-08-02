@@ -10,7 +10,11 @@ use App\Bookings\TImeSlotGenerator;
 
 class SlotsPassedTodayFilter implements  Filter 
 {
-	public function apply(TImeSlotGenerator $generator, CarbonPeriod $interval) {
-		dd('filter');
+	public function apply(TimeSlotGenerator $generator, CarbonPeriod $interval)
+	 {
+	 	// define a clousoure 
+	$interval->addFilter( function () {
+		return true;
+	});	
 	}
 }
