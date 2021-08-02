@@ -13,7 +13,12 @@ class SlotsPassedTodayFilter implements  Filter
 	public function apply(TimeSlotGenerator $generator, CarbonPeriod $interval)
 	 {
 	 	// define a clousoure 
-	$interval->addFilter( function () {
+	$interval->addFilter( function ($slot) use ($generator)  {
+		if($generator->schedule) {
+
+		}
+
+
 		return true;
 	});	
 	}
