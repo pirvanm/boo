@@ -18,7 +18,8 @@ build for pages
 populate database with table "structure" from migration
 
 
-#5
+#5 cream un model si o migrare (-m)
+php artisan make:model Employee -m
 
 #6 
 
