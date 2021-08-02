@@ -15,6 +15,8 @@ class CreateScheduleUnavailabilitiesTable extends Migration
     {
         Schema::create('schedule_unavailabilities', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('schedule_id')->contrained()->onDelete('cascade');
+            
             $table->timestamps();
         });
     }
