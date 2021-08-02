@@ -13,7 +13,10 @@ class BookingController extends Controller
 
 	// use this to about dry and "spaghety code in controller "
 
-    	$slots = (new TimeSlotGenerator($schedule))->get();
+    	$slots = (new TimeSlotGenerator($schedule , $service))
+    	->applyFilters (
+    		new SlotsPassedTodayFilter())
+    	->get();
 
     	return view('bookings.create', [
     		'slots' => $slots])
