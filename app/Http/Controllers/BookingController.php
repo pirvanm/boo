@@ -12,6 +12,11 @@ class BookingController extends Controller
     	$schedule = Schedule::find(2);
     	$service = Service::find(2);
 
+    	$appointments = Appointment::whereDate('2021-05-30')
+    	->get();
+
+    	dd($appointments);
+
 	// use this to about dry and "spaghety code in controller "
 
     	$slots = (new TimeSlotGenerator($schedule , $service))
