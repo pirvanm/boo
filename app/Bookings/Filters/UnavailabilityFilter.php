@@ -27,10 +27,12 @@ class AppointmentFilter implements  Filter
 			if(
 				$slot->between(
 				$appointment->date->setTimeFrom(
-					$appointment->start_time 
+					$appointment->start_time->subMinutes(
+						$generator->service->duration - $generator::INCREMENT) 
 				),
 					$appointment->date->setTimeFrom(
-						$appointment->end_time )
+						$unavailability->end_time->subMinutes
+						$generator::INCREMENT  )
 			)
 		)
 		) {
