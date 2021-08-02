@@ -15,5 +15,9 @@ class TimeSlotGenerator {
     		$schedule->date->setTimeFrom($schedule->end_time);
 
 	}
-	// use this to about dry and "spaghety code in controller "
+
+	public function get () {
+		return $this->interval;
+	}
+
 }
