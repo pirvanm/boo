@@ -19,6 +19,12 @@ class TimeSlotGenerator {
 
 	}
 
+	public function applyFilters(array $filters) {
+		foreach ($variable as $key => $value) {
+			# code...
+		}
+	}
+
 	public function get () {
 		return $this->interval;
 	}
