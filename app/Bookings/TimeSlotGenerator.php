@@ -19,10 +19,20 @@ class TimeSlotGenerator {
 
 	}
 
-	public function applyFilters(array $filters) {
-		foreach ($variable as $key => $value) {
-			# code...
+	public function applyFilters(array $filters) 
+	{
+		// iterate to each filters 
+		foreach ($filters  as  $filter)  {
+			// define why we filter 
+			if(!$filter instanceof Filter){
+				continue;
+			}
+
+			$filter->apply($this, $interval);
+			
 		}
+
+	
 	}
 
 	public function get () {
