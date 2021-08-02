@@ -1,0 +1,25 @@
+#1 Ask , download in vendor the package breeze
+
+composer require laravel/breeze --dev
+#2 grab from vendor to project the package breeze 
+
+
+ php artisan breeze:install
+
+#3 download & build javascript package 
+
+npm i & npm run dev
+npm install download all package to nodemodule
+&
+build for pages
+
+#4 php artisan migrate
+
+populate database with table "structure" from migration
+
+
+#5
+
+#6 
+
+#7
