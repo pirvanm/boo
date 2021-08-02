@@ -15,6 +15,7 @@ class CreateSchedulesTable extends Migration
     {
         Schema::create('schedules', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('employee_id')->contrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
