@@ -23,4 +23,8 @@ php artisan make:model Employee -m
 
 #6 php artisan migrate
 
-#7
+For fast popualte of  database via terminal
+#7 php artisan tinker 
+
+
+Appointment::create(['token' => 'abc', 'employee_id'=> 1, 'serice_id'=> 1 , 'data' => '2021-05-30', 'start_time' => '09:00', 'end_time' => '10.00', 'client_name' => 'Alex',' client_email'=> ' marian']);
