@@ -23,7 +23,7 @@ class BookingController extends Controller
     	->applyFilters (
     		new SlotsPassedTodayFilter(),
     		new UnavailabilityFilter($schedule->unavailabilities),
-    		new AppointmentFilter()
+    		new AppointmentFilter($appointments)
     		])
     	->get();
 
