@@ -28,3 +28,8 @@ For fast popualte of  database via terminal
 
 
 Appointment::create(['token' => 'abc', 'employee_id'=> 1, 'serice_id'=> 1 , 'data' => '2021-05-30', 'start_time' => '09:00', 'end_time' => '10.00', 'client_name' => 'Alex',' client_email'=> ' marian']);
+
+Null violation in column "uuid" to relation appoointment
+
+ After fix run this : 
+Appointment::create([ 'employee_id'=> 1, 'serice_id'=> 1 , 'date' => '2021-05-30', 'start_time' => '09:00', 'end_time' => '10.00', 'client_name' => 'Alex',' client_email'=> ' marian']);

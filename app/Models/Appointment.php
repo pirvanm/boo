@@ -14,7 +14,10 @@ class Appointment extends Model
     	'start_time',
     	'end_time',
     	'client_name',
-    	'client_email'
+    	'client_email',
+    	// remove those 2 in future
+    	'employee_id',
+    	'service_id'
     ];
 
     protected $casts = [
@@ -23,6 +26,13 @@ class Appointment extends Model
     	'end_time' => 'datetime'
     	];
 
+
+public static function booter() {
+	static::creating(function ($model) {
+		$model->uuid = Str::uuid();
+		$model->token = Str::radom(32);
+	});
+}
 
     	public function service() {
     		return $this->belongsTo(Service::class);
