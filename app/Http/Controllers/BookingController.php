@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class BookingController extends Controller
 {
-    public function __invoce () {
+    public function __invoke () {
     	return view('bookings.create')
 
     }
