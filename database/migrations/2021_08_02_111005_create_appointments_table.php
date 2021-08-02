@@ -17,6 +17,8 @@ class CreateAppointmentsTable extends Migration
             $table->id();
             $table->uuid('uuid');
             $table->string('token');
+            $table->foreignId('employee_id')->contrained()->onDelete('cascade');
+            $table->foreignId('service_id')->contrained()->onDelete('cascade');
             $table->date('date');
             $table->time('start_time');
             $table->string('client_name');
