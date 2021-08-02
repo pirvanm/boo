@@ -1,7 +1,7 @@
 <?php 
 namespace App\Bookings;
 
-
+use App\Modes\Schedule;
 use Carbon\CarbonInterval;
 class TimeSlotGenerator {
 
