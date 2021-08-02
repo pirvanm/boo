@@ -33,3 +33,6 @@ Null violation in column "uuid" to relation appoointment
 
  After fix run this : 
 Appointment::create([ 'employee_id'=> 1, 'serice_id'=> 1 , 'date' => '2021-05-30', 'start_time' => '09:00', 'end_time' => '10.00', 'client_name' => 'Alex',' client_email'=> ' marian']);
+
+
+To few argument to function whereDate() , 1 passed 2 expected

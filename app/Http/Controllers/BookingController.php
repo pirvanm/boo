@@ -12,7 +12,7 @@ class BookingController extends Controller
     	$schedule = Schedule::find(2);
     	$service = Service::find(2);
 
-    	$appointments = Appointment::whereDate('2021-05-30')
+    	$appointments = Appointment::whereDate('date','2021-05-30')
     	->get();
 
     	dd($appointments);
