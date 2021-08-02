@@ -15,6 +15,7 @@ class SlotsPassedTodayFilter implements  Filter
 	 	// define a clousoure 
 	$interval->addFilter( function ($slot) use ($generator)  {
 		if($generator->schedule->date->isToday()) {
+			// lt less that curent time 
 				if($slot->lt(now())) {
 					return false;
 				}
