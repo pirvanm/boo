@@ -10,6 +10,7 @@ class BookingController extends Controller
     public function __invoke () {
 
     	$schedule = Schedule::find(2);
+    	$service = Service::find(2);
 
 	// use this to about dry and "spaghety code in controller "
 
